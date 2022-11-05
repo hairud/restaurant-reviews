@@ -2,10 +2,11 @@
   type ButtonVariant = "red" | "white";
 
   export let text;
+  export let onClick: () => void;
   export let type: ButtonVariant;
 </script>
 
-<button data-type={type === "red" ? "red" : "white"}>{text}</button>
+<button data-type={type === "red" ? "red" : "white"} on:click={onClick}>{text}</button>
 
 <style>
   button {

@@ -3,6 +3,7 @@
   import crop from "../assets/crop.png";
   import balloon from "../assets/balloon.png";
   import Button from "./Button.svelte";
+  import { navigate } from "svelte-routing";
 </script>
 
 <div class="wrap">
@@ -12,7 +13,7 @@
   <h4>it's time for great</h4>
   <h1>Adventure</h1>
   <div class="button-wrap">
-    <Button text="start now" type="white" />
+    <Button text="start now" type="white" onClick={() => navigate("/tours")} />
   </div>
 </div>
 
